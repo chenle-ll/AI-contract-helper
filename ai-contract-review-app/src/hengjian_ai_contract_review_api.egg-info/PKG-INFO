@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: hengjian-ai-contract-review-api
+Version: 1.0.0
+Summary: FastAPI backend for Hengjian AI contract review
+Requires-Python: >=3.11
+Requires-Dist: fastapi<1,>=0.116
+Requires-Dist: httpx<1,>=0.28
+Requires-Dist: pydantic-settings<3,>=2.10
+Requires-Dist: python-docx<2,>=1.2
+Requires-Dist: python-multipart<1,>=0.0.20
+Requires-Dist: pypdf<7,>=5.9
+Requires-Dist: reportlab<5,>=4.4
+Requires-Dist: uvicorn[standard]<1,>=0.35
+Provides-Extra: dev
+Requires-Dist: pytest<9,>=8.4; extra == "dev"

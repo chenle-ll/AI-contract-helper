@@ -1,0 +1,27 @@
+{
+  "name": "hengjian-ai-contract-review",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c green,cyan \"pnpm dev:api\" \"vite --host 127.0.0.1\"",
+    "dev:api": ".venv/bin/python -m uvicorn backend.main:app --reload --host 127.0.0.1 --port 8787",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "start": ".venv/bin/python -m uvicorn backend.main:app --host 127.0.0.1 --port 8787",
+    "test": ".venv/bin/python -m pytest"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.24",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "concurrently": "^9.2.1",
+    "typescript": "^5.9.2",
+    "vite": "^6.1.0"
+  }
+}

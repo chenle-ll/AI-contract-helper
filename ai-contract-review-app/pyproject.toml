@@ -1,0 +1,25 @@
+[project]
+name = "hengjian-ai-contract-review-api"
+version = "1.0.0"
+description = "FastAPI backend for Hengjian AI contract review"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.116,<1",
+  "httpx>=0.28,<1",
+  "pydantic-settings>=2.10,<3",
+  "python-docx>=1.2,<2",
+  "python-multipart>=0.0.20,<1",
+  "pypdf>=5.9,<7",
+  "reportlab>=4.4,<5",
+  "uvicorn[standard]>=0.35,<1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.4,<9",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["backend/tests"]
+pythonpath = ["."]
+addopts = "-q"
